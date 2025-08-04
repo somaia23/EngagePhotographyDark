@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Albums</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/albums.css">
+  <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+  <!-- Navbar -->
+   <nav class="navbar">
+      <div class="nav-container">
+       <img src="images/engage-photography.png" alt="">
+        
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="albums.html">Albums</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search..." />
+          <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  <!-- Hero Section -->
+  <section class="albums-hero">
+    <div class="albums-hero-content">
+      <h1>Albums</h1>
+      <p>Our brilliant latest work.</p>
+    </div>
+  </section>
+  
+  <!-- Main Content -->
+  <main>
+    <div class="albums-filter">
+      <button class="filter-btn active" data-filter="all">Show All</button>
+      <button class="filter-btn" data-filter="landscape">Landscape</button>
+      <button class="filter-btn" data-filter="mountains">Mountains</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="photography">Photography</button>
+      <button class="filter-btn" data-filter="travel">Travel</button>
+    </div>
+
+
+
+
+    <div class="albums-grid">
+      <div class="album-item nature"><img src="images/album1.jpg" alt="Nature Album 1"></div>
+      <div class="album-item nature"><img src="images/album2.jpg" alt="Nature Album 2"></div>
+      <div class="album-item photography"><img src="images/album3.jpg" alt="Photography Album 3"></div>
+      <div class="album-item photography travel"><img src="images/album4.jpg" alt="Travel Photography Album 4"></div>
+      <div class="album-item mountains"><img src="images/album5.jpg" alt="Mountains Album 5"></div>
+      <div class="album-item travel"><img src="images/album6.jpg" alt="Travel Album 6"></div>
+      <div class="album-item landscape travel"><img src="images/album7.jpg" alt="Landscape Travel Album 7"></div>
+      <div class="album-item mountains"><img src="images/album8.jpg" alt="Mountains Album 8"></div>
+      <div class="album-item photography"><img src="images/album9.jpg" alt="Photography Album 9"></div>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+ <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo"><img src="images/engage-photography.png" alt=""></div>
+        <div class="footer-social">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Artisan Photography. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  
+  <!-- JavaScript -->
+  <script src="js/albums.js">
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

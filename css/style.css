@@ -1,0 +1,440 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  background: #000;
+  font-family: serif;
+  height: 100vh;
+  margin: 0;
+  padding-top: 80px;
+}
+
+
+
+/* Hero Section */
+.photo {
+  background-image: url("../images/full-3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.content {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.content p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.content h1 {
+  font-size: 60px;
+  font-family: serif;
+  font-weight: bold;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.buttn {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background-color: #111;
+  color: #ccc;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.welcome-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.welcome-content h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.welcome-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #aaa;
+}
+
+/* About Section */
+.about-section {
+  background-color: #1b1b1b;
+  padding: 80px 40px;
+  color: #ccc;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.about-image img {
+  max-width: 100%;
+  width: 400px;
+  border-radius: 4px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h3 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+/* Albums Section */
+.albums-section {
+  background-color: #111;
+  padding: 80px 20px;
+  color: #ccc;
+  text-align: center;
+}
+
+.albums-header h2 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.albums-header p {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.albums-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background: none;
+  color: #ccc;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #333;
+  color: white;
+}
+
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.albums-grid .album-item:nth-child(4) {
+  width: 300px;
+}
+
+.albums-grid img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.albums-grid img:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+  filter: brightness(0.9);
+}
+
+.album-item {
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: block;
+}
+
+.album-item.hide {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.album-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+.overlay-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-icons a {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.overlay-icons a:hover {
+  background-color: #222;
+  color: white;
+}
+
+.album-item:hover .overlay-icons {
+  opacity: 1;
+}
+
+.view-all {
+  margin-top: 40px;
+}
+
+/* News Section */
+.news-section {
+  background-color: #1b1b1b;
+  color: #ccc;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.news-header h2 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.news-header p {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 50px;
+}
+
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.news-card {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.news-card:hover {
+  background-color: #222;
+}
+
+.news-card h4 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.news-card small {
+  font-size: 12px;
+  color: #888;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.news-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.news-card a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+}
+
+.visit-blog {
+  margin-top: 40px;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #ccc;
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.footer-social {
+  margin: 30px 0;
+}
+
+.footer-social a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  border-radius: 50%;
+  line-height: 50px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.footer-social a:hover {
+  background: #333;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Map Container */
+.map-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+  .photo {
+    height: auto;
+    padding: 40px 20px;
+    margin-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+

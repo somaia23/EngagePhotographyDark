@@ -1,0 +1,181 @@
+.navbar {
+          background-color: rgba(0, 0, 0, 0.9);
+          padding: 1rem 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+          backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 2rem;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #fff;
+          text-decoration: none;
+          letter-spacing: 2px;
+        }
+
+        .nav-menu {
+          display: flex;
+          list-style: none;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        .nav-menu a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s ease;
+          font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+          color: #666;
+        }
+
+        .search-container {
+          position: relative;
+          margin-left: 2rem;
+        }
+
+        .search-input {
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 25px;
+          padding: 0.5rem 1rem 0.5rem 2.5rem;
+          color: #fff;
+          width: 200px;
+          transition: all 0.3s ease;
+        }
+
+        .search-input::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-input:focus {
+          outline: none;
+          border-color: #666;
+          width: 250px;
+        }
+
+        .search-icon {
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 0.9rem;
+        }
+
+        .mobile-toggle {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+          padding: 0.5rem;
+        }
+
+        .mobile-toggle span {
+          width: 25px;
+          height: 3px;
+          background-color: #fff;
+          margin: 2px 0;
+          transition: 0.3s;
+          border-radius: 3px;
+        }
+   @media (max-width: 768px) {
+          .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.95);
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            padding: 2rem 0;
+          }
+
+          .nav-menu.active {
+            left: 0;
+          }
+
+          .nav-menu li {
+            margin: 1rem 0;
+          }
+
+          .mobile-toggle {
+            display: flex;
+          }
+
+          /* Mobile search styling - now visible */
+          .search-container {
+            margin-left: 1rem;
+            margin-right: 1rem;
+          }
+
+          .search-input {
+            width: 150px;
+            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem 0.4rem 2rem;
+          }
+
+          .search-input:focus {
+            width: 180px;
+          }
+
+          .search-icon {
+            left: 8px;
+            font-size: 0.8rem;
+          }
+
+          .nav-container {
+            padding: 0 1rem;
+          }
+
+        }
+
+        /* Even smaller screens - adjust search further */
+        @media (max-width: 480px) {
+          .search-container {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+          }
+
+          .search-input {
+            width: 120px;
+          }
+
+          .search-input:focus {
+            width: 150px;
+          }
+
+          .nav-container {
+            padding: 0 0.5rem;
+          }
+
+          .logo {
+            font-size: 1.2rem;
+          }
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }

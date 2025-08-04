@@ -1,0 +1,266 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: serif;
+  height: 100vh;
+  margin: 0;
+}
+
+
+/* Albums Section */
+.albums-hero {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 100px 20px 60px;
+  text-align: center;
+  margin-top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.album-item {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.albums-hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.albums-hero p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.albums-header h2 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.albums-header p {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.albums-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.filter-btn {
+  background: none;
+  color: #ccc;
+  border: 1px solid #333;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #333;
+  color: white;
+  border-color: #555;
+}
+
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.albums-grid .album-item:nth-child(4) {
+  width: 300px;
+}
+
+.albums-grid img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.albums-grid img:hover {
+  transform: scale(1.02);
+}
+
+.album-item {
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.album-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.album-item:hover::before {
+  opacity: 1;
+}
+
+.album-item.hide {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.view-all {
+  margin-top: 40px;
+}
+
+.view-all .btn {
+  background-color: #333;
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.view-all .btn:hover {
+  background-color: #444;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #ccc;
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.footer-social {
+  margin: 30px 0;
+}
+
+.footer-social a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  border-radius: 50%;
+  line-height: 50px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.footer-social a:hover {
+  background: #333;
+  color: white;
+  transform: translateY(-5px);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ 
+
+  .albums-hero h1 {
+    font-size: 36px;
+  }
+
+  .albums-hero p {
+    font-size: 16px;
+  }
+
+  .albums-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  .albums-hero {
+    padding: 15px 10px;
+  }
+
+  .albums-hero h1 {
+    font-size: 28px;
+  }
+
+  .albums-hero p {
+    font-size: 14px;
+  }
+
+  .albums-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    padding: 0 0.5rem;
+  }
+
+  .albums-grid .album-item:nth-child(4) {
+    width: 100%;
+  }
+
+  .filter-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 375px) {
+
+
+
+  .albums-hero h1 {
+    font-size: 24px;
+  }
+
+  .albums-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
